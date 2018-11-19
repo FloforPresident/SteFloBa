@@ -8,8 +8,9 @@ public class NewBehaviourScript : MonoBehaviour {
     private bool schiessen = false;
 
     public GameObject raketenPrefab;
-    public Transform RaketeSpawnPoint;
-    public float raketenSpeed = 500;
+    public Transform raketenSpawnPoint;
+    public Transform drehen;
+    public float raketenSpeed = 500f;
 
     // Use this for initialization
     void Start ()
@@ -33,8 +34,9 @@ public class NewBehaviourScript : MonoBehaviour {
     {
         if(schiessen)
         {
-            GameObject Rakete = (GameObject) Instantiate(raketenPrefab, RaketeSpawnPoint.position, Quaternion.identity);
+            GameObject Rakete = (GameObject) Instantiate(raketenPrefab, raketenSpawnPoint.position, Quaternion.identity);
             Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+            Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.RotateTowards(Vector3.up,Vector3.down , 180, 360) * raketenSpeed);
 
             schiessen = false;
         }
