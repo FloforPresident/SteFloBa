@@ -16,7 +16,7 @@ public class Background_Scroller : MonoBehaviour {
 	void Update () {
         transform.Translate((new Vector3(0, -1, 0)) * speed * Time.deltaTime);
 
-        if (transform.position.y < -12.19842)
+        if (transform.position.y < -9.974487)
         {
             transform.position = startPos;
         }
