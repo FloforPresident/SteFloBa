@@ -20,9 +20,12 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * movespeed,
-                            Input.GetAxis("Vertical") * Time.deltaTime * movespeed,
-                            0f);
+        //neue Bewegung in FixedUpdate
+
+        //transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * movespeed,
+        //                    Input.GetAxis("Vertical") * Time.deltaTime * movespeed,
+        //                    0f);
+
         if (Input.GetButtonDown("Fire1") && !schiessen)
         {
             schiessen = true;
@@ -38,5 +41,9 @@ public class NewBehaviourScript : MonoBehaviour {
 
             schiessen = false;
         }
+
+        // neue Bewegung, dass Box Collider gut aussieht
+        var rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        rigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * movespeed, Input.GetAxisRaw("Vertical") * movespeed);
     }
 }
