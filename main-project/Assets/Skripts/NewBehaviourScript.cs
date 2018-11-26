@@ -9,8 +9,8 @@ public class NewBehaviourScript : MonoBehaviour {
     private bool schiessen2 = false;    //wifi
     private bool schiessen3 = false;    //laser
 
-    private int counterWifi = 10;
-
+    static public int counterWifi = 10;
+    static public int counterRaketen = 20;
 
     public GameObject raketenPrefab;
     public GameObject wifiPrefab;
@@ -52,11 +52,21 @@ public class NewBehaviourScript : MonoBehaviour {
     {
         if(schiessen1) //Raketen
         {
-            GameObject Rakete = (GameObject) Instantiate(raketenPrefab, raketenSpawnPoint.position, Quaternion.identity);
-            Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+            if(counterRaketen > 0)
+            {
+                GameObject Rakete = (GameObject) Instantiate(raketenPrefab, raketenSpawnPoint.position, Quaternion.identity);
+                Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+                counterRaketen--;
+            }
+            else //keine Munition, Raketen werden verschossen
+            {
+                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
+                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+            }
 
             schiessen1 = false;
         }
+
         if (schiessen2) //Wifi
         {
             if (counterWifi > 0)
@@ -70,15 +80,15 @@ public class NewBehaviourScript : MonoBehaviour {
                 GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
                 Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
             }
-
             schiessen2 = false;
         }
+
         if (schiessen3) //Laser
         {
-            GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
-            Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
-
-            schiessen3 = false;
+                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
+                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+                
+                schiessen3 = false;
         }
 
         // neue Bewegung, dass Box Collider gut aussieht
