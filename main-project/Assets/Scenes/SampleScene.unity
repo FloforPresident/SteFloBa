@@ -593,6 +593,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raketenPrefab: {fileID: 1930416352786594, guid: 8c64d06caace2494f95a4a5177fe0a26,
     type: 2}
+  wifiPrefab: {fileID: 1535926282645492, guid: ed564ddba25667e40b40d5c66547f808, type: 2}
+  laserPrefab: {fileID: 1923696549639016, guid: 67c534332cfacd44897a7887686a63fa,
+    type: 2}
   raketenSpawnPoint: {fileID: 776747692}
   raketenSpeed: 500
 --- !u!212 &1685119454
