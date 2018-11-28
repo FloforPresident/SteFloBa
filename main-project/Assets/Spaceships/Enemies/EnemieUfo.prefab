@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212813385820696444}
   - component: {fileID: 50947024012747904}
   - component: {fileID: 61328399323119434}
+  - component: {fileID: 114539790462166382}
   m_Layer: 0
   m_Name: EnemieUfo
   m_TagString: Untagged
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 27.53, y: 12.040001}
   m_EdgeRadius: 0
+--- !u!114 &114539790462166382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041002421383784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a679df2a8948b9449a97591f6eab2b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212813385820696444
 SpriteRenderer:
   m_ObjectHideFlags: 1
