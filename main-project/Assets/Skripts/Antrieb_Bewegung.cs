@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Antrieb_Bewegung : MonoBehaviour {
 
-    float movespeed = 20f;
+    public float movespeed = 20f;
 
     // Use this for initialization
     void Start () {
