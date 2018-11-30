@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemieHit : MonoBehaviour {
 
+    public GameObject destruction;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +19,7 @@ public class EnemieHit : MonoBehaviour {
     {
         if(col.gameObject.tag.Equals("Bullet"))
         {
+            Instantiate(destruction, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
             Destroy(gameObject);
         }

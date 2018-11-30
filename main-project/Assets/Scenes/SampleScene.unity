@@ -971,6 +971,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &1205581820
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.8433915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.53729963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719149036784658, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a43ac91012cbdfb42b4f37da23ceca4b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1505054406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1115,7 @@ GameObject:
   - component: {fileID: 1685119456}
   - component: {fileID: 1685119457}
   m_Layer: 0
-  m_Name: Spaceshiip_stefan
+  m_Name: Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
