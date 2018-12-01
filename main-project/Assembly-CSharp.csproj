@@ -64,6 +64,7 @@
      <Compile Include="Assets\Skripts\animationController.cs" />
      <Compile Include="Assets\Skripts\Antrieb_Bewegung.cs" />
      <Compile Include="Assets\Skripts\Background_Scroller.cs" />
+     <Compile Include="Assets\Skripts\CatHit.cs" />
      <Compile Include="Assets\Skripts\DestroyGameObject.cs" />
      <Compile Include="Assets\Skripts\EnemieHit.cs" />
      <Compile Include="Assets\Skripts\EnemieSpawnerScript.cs" />
