@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a679df2a8948b9449a97591f6eab2b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destruction: {fileID: 1104380467933006, guid: a43ac91012cbdfb42b4f37da23ceca4b,
+  destruction1: {fileID: 1104380467933006, guid: a43ac91012cbdfb42b4f37da23ceca4b,
+    type: 2}
+  destruction2: {fileID: 1195813623865962, guid: 58e255c73917a2340a7f6d12fd49205c,
     type: 2}
 --- !u!212 &212813385820696444
 SpriteRenderer:

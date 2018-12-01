@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemieHit : MonoBehaviour {
 
-    public GameObject destruction;
+    public GameObject destruction1;
+    public GameObject destruction2;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -19,9 +20,10 @@ public class EnemieHit : MonoBehaviour {
     {
         if(col.gameObject.tag.Equals("Bullet"))
         {
-            Instantiate(destruction, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
             Destroy(gameObject);
+            Instantiate(destruction1, transform.position, Quaternion.identity);
+            Instantiate(destruction2, transform.position, Quaternion.identity);
         }
     }
 }
