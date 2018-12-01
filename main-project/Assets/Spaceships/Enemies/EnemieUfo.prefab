@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 50947024012747904}
   - component: {fileID: 61328399323119434}
   - component: {fileID: 114539790462166382}
-  m_Layer: 0
+  - component: {fileID: 247805066657011222}
+  m_Layer: 8
   m_Name: EnemieUfo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +58,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -147,3 +148,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!247 &247805066657011222
+ConstantForce2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041002421383784}
+  m_Enabled: 1
+  m_Force: {x: 0, y: -2}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0
