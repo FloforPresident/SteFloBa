@@ -166,3 +166,7 @@ C:\Users\Stefan\Documents\05_Studium\05_Unterlagen\3. Semester\03_Software_Engin
 C:\Users\Stefan\Documents\05_Studium\05_Unterlagen\3. Semester\03_Software_Engineering\Projekt\Game\SteFloBa\main-project\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Documents\05_Studium\05_Unterlagen\3. Semester\03_Software_Engineering\Projekt\Game\SteFloBa\main-project\obj\Debug\Assembly-CSharp.dll
 C:\Users\Stefan\Documents\05_Studium\05_Unterlagen\3. Semester\03_Software_Engineering\Projekt\Game\SteFloBa\main-project\obj\Debug\Assembly-CSharp.pdb
+D:\Eigene Dateien\Dokumente\Daten\GitHub\SteFloBa\main-project\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\Eigene Dateien\Dokumente\Daten\GitHub\SteFloBa\main-project\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\Eigene Dateien\Dokumente\Daten\GitHub\SteFloBa\main-project\obj\Debug\Assembly-CSharp.dll
+D:\Eigene Dateien\Dokumente\Daten\GitHub\SteFloBa\main-project\obj\Debug\Assembly-CSharp.pdb
