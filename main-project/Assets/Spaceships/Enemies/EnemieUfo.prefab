@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61328399323119434}
   - component: {fileID: 114539790462166382}
   - component: {fileID: 247805066657011222}
+  - component: {fileID: 114568340629543988}
   m_Layer: 8
   m_Name: EnemieUfo
   m_TagString: Enemy
@@ -104,6 +105,22 @@ MonoBehaviour:
     type: 2}
   destruction2: {fileID: 1195813623865962, guid: 58e255c73917a2340a7f6d12fd49205c,
     type: 2}
+--- !u!114 &114568340629543988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041002421383784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1b99256d95a5144af700d9ce4d7eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  stoppingDistance: 3
+  retreatDistance: 2
+  starttimeBtwShots: 1
+  projectile: {fileID: 1650184404335532, guid: 8f0a483465883e949988fac5d38e83a9, type: 2}
 --- !u!212 &212813385820696444
 SpriteRenderer:
   m_ObjectHideFlags: 1
