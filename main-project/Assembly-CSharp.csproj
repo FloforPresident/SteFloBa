@@ -69,8 +69,10 @@
      <Compile Include="Assets\Skripts\EnemieHit.cs" />
      <Compile Include="Assets\Skripts\EnemieSpawnerScript.cs" />
      <Compile Include="Assets\Skripts\EnemyMain.cs" />
+     <Compile Include="Assets\Skripts\GameControlScript.cs" />
      <Compile Include="Assets\Skripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Skripts\Projectile.cs" />
+     <Compile Include="Assets\Skripts\SpaceshipHit.cs" />
      <Compile Include="Assets\Skripts\Text2.cs" />
      <Compile Include="Assets\Skripts\TextBehavior.cs" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
