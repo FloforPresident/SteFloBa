@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61372741898948134}
   - component: {fileID: 114772447463714414}
   - component: {fileID: 50940612139861226}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wifi
   m_TagString: Bullet
   m_Icon: {fileID: 0}
