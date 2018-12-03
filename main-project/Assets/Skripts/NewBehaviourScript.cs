@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
@@ -18,6 +19,12 @@ public class NewBehaviourScript : MonoBehaviour {
 
     public Transform raketenSpawnPoint;
     public float raketenSpeed = 300f;
+    public float wifiSpeed = 1;
+
+    public int timer = 0;
+    public int timerIntervall = 100;
+
+    //Vector3 scaleTransform = new Vector3(0.1f, 0.1f, 0);
 
     // Use this for initialization
     void Start ()
@@ -28,6 +35,12 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
+        timer++;
+        if (timer == timerIntervall)
+        {
+            counterWifi++;
+            timer = 0;
+        }
         //neue Bewegung in FixedUpdate
 
         //transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * movespeed,
@@ -72,7 +85,7 @@ public class NewBehaviourScript : MonoBehaviour {
             if (counterWifi > 0)
             {
                 GameObject Wifi = (GameObject)Instantiate(wifiPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                Wifi.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+                //Wifi.GetComponent<Rigidbody2D>().AddForce(Vector3.up * wifiSpeed);
                 counterWifi--;
             }
             else //keine Munition, Raketen werden verschossen
