@@ -71,6 +71,7 @@
      <Compile Include="Assets\Skripts\EnemyMain.cs" />
      <Compile Include="Assets\Skripts\GameControlScript.cs" />
      <Compile Include="Assets\Skripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Skripts\PlanetenHohlSpawner.cs" />
      <Compile Include="Assets\Skripts\Projectile.cs" />
      <Compile Include="Assets\Skripts\SpaceshipHit.cs" />
      <Compile Include="Assets\Skripts\Text2.cs" />
