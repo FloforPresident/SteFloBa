@@ -11,7 +11,7 @@ public class ScoreScript : MonoBehaviour {
 		
 	}
 
-    public double endBoss1Points = 6000u;
+    public uint enemy2Points = 6000u;
     public const uint moreDifficult = 5000u;
 
     public Text score;
@@ -31,10 +31,10 @@ public class ScoreScript : MonoBehaviour {
             deltaScore = 0;
         }
         //Endgegner kommt
-        if(Score > endBoss1Points)
+        if(Score > enemy2Points)
         {
-            EnemieSpawnerScript.endboss = true;
-            endBoss1Points *= 2;
+            EnemieSpawnerScript.enemy2Spawn = true;
+            enemy2Points += 6000;
         }
     }
 }

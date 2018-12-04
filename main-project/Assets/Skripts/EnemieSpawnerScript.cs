@@ -6,12 +6,11 @@ public class EnemieSpawnerScript : MonoBehaviour {
 
     public GameObject enemy;
 
-    public GameObject EndBoss1;
-    public static bool endboss = false;
+    public GameObject enemy2;
+    public static bool enemy2Spawn = false;
 
     float randX;
     Vector2 whereToSpawn;
-    Vector2 whereToSpawnEndboss1 = new Vector2(0,(float)5.5);
 
     public static double spawnRate = 2;
     double nextSpawn = 0.0;
@@ -24,11 +23,12 @@ public class EnemieSpawnerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(endboss)
+        if(enemy2Spawn)
         {
-            Instantiate(EndBoss1, whereToSpawnEndboss1, Quaternion.identity);
-            EndBoss1.transform.Rotate(new Vector3(0, 0, 1), 180);
-            endboss = false;
+            randX = Random.Range(-7.5f, 7.5f);
+            whereToSpawn = new Vector2(randX, 6);
+            Instantiate(enemy2, whereToSpawn, Quaternion.identity);
+            enemy2Spawn = false;
         }
 
         if (Time.time > nextSpawn)

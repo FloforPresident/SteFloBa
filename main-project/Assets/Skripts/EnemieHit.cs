@@ -7,6 +7,7 @@ public class EnemieHit : MonoBehaviour {
     public GameObject destruction1;
     public GameObject destruction2;
 
+    public uint lifes;
     // Use this for initialization
     void Start () {
 		
@@ -21,12 +22,16 @@ public class EnemieHit : MonoBehaviour {
         if(col.gameObject.tag.Equals("Bullet"))
         {
             Destroy(col.gameObject);
-            ScoreScript.Score += 1000;
-            ScoreScript.deltaScore += 1000;
 
+            if(lifes < 2)
+            {
             Destroy(gameObject);
             Instantiate(destruction1, transform.position, Quaternion.identity);
             Instantiate(destruction2, transform.position, Quaternion.identity);
+            ScoreScript.Score += 1000;
+            ScoreScript.deltaScore += 1000;
+            }
+            lifes--;
         }
     }
 }
