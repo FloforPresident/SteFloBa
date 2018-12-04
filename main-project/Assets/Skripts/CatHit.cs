@@ -22,6 +22,7 @@ public class CatHit : MonoBehaviour {
         {
             Destroy(col.gameObject);
             Destroy(gameObject);
+            ScoreScript.Score += 500; //Score Punkte
             Instantiate(destruction, transform.position, Quaternion.identity);
         }
         if (col.gameObject.tag.Equals("Player"))

@@ -21,6 +21,7 @@ public class EnemieHit : MonoBehaviour {
         if(col.gameObject.tag.Equals("Bullet"))
         {
             Destroy(col.gameObject);
+            ScoreScript.Score += 1000;
             Destroy(gameObject);
             Instantiate(destruction1, transform.position, Quaternion.identity);
             Instantiate(destruction2, transform.position, Quaternion.identity);
