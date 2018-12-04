@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fc8a8b2ce0cf54b902a62c1bb8a994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1041002421383784, guid: 7b62718a4f64f164194f3d655281306d, type: 2}
+  enemy: {fileID: 1398852204564238, guid: 709a75d0322d738409f80c8515707534, type: 2}
   enemy2: {fileID: 1565089256298718, guid: f41efd2ae779a0b4fa45f8e5b078a331, type: 2}
 --- !u!4 &55352736
 Transform:
