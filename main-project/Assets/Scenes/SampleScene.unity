@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1041002421383784, guid: 7b62718a4f64f164194f3d655281306d, type: 2}
+  EndBoss1: {fileID: 1565089256298718, guid: f41efd2ae779a0b4fa45f8e5b078a331, type: 2}
 --- !u!4 &55352736
 Transform:
   m_ObjectHideFlags: 0
@@ -592,9 +593,9 @@ RectTransform:
   m_Father: {fileID: 828691379}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 318, y: -215}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45, y: -11}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489213327
@@ -648,6 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b41d895522f9f40a3494f77a09bdbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endBoss1Points: 6000
   score: {fileID: 489213327}
 --- !u!1 &519420028
 GameObject:

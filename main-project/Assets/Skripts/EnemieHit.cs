@@ -22,6 +22,8 @@ public class EnemieHit : MonoBehaviour {
         {
             Destroy(col.gameObject);
             ScoreScript.Score += 1000;
+            ScoreScript.deltaScore += 1000;
+
             Destroy(gameObject);
             Instantiate(destruction1, transform.position, Quaternion.identity);
             Instantiate(destruction2, transform.position, Quaternion.identity);
