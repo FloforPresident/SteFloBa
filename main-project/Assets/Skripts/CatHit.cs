@@ -32,7 +32,7 @@ public class CatHit : MonoBehaviour {
             Destroy(gameObject);
             Instantiate(destruction, transform.position, Quaternion.identity);
 
-            col.gameObject.transform.localScale += new Vector3(0.03f, 0.03f, 0);
+            //col.gameObject.transform.localScale += new Vector3(0.03f, 0.03f, 0);
         }
     }
 }
