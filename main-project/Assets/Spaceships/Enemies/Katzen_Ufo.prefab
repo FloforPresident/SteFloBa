@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114363335277955584}
   m_Layer: 8
   m_Name: Katzen_Ufo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1b99256d95a5144af700d9ce4d7eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   stoppingDistance: 3
   retreatDistance: 2
   starttimeBtwShots: 1

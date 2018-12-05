@@ -22,7 +22,10 @@ public class NewBehaviourScript : MonoBehaviour {
     public float wifiSpeed = 1;
 
     public int timer = 0;
-    public int timerIntervall = 100;
+    public int timerIntervall = 100; //Aufladerate von Missiles & Wifi
+
+    public float waitingTime = 0;
+    public float WeapondeltaTime = 0.3f;
 
     //Vector3 scaleTransform = new Vector3(0.1f, 0.1f, 0);
 
@@ -38,6 +41,7 @@ public class NewBehaviourScript : MonoBehaviour {
         timer++;
         if (timer == timerIntervall)
         {
+            counterRaketen++;
             counterWifi++;
             timer = 0;
         }
@@ -65,43 +69,37 @@ public class NewBehaviourScript : MonoBehaviour {
     {
         if(schiessen1) //Raketen
         {
-            if(counterRaketen > 0)
+            if(counterRaketen > 0 && Time.time > waitingTime)
             {
                 GameObject Rakete = (GameObject) Instantiate(raketenPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+                //Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
                 counterRaketen--;
+                waitingTime = Time.time + WeapondeltaTime;
             }
-            else //keine Munition, Raketen werden verschossen
-            {
-                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
-            }
-
             schiessen1 = false;
         }
 
         if (schiessen2) //Wifi
         {
-            if (counterWifi > 0)
+            if (counterWifi > 0 && Time.time > waitingTime)
             {
                 GameObject Wifi = (GameObject)Instantiate(wifiPrefab, raketenSpawnPoint.position, Quaternion.identity);
                 //Wifi.GetComponent<Rigidbody2D>().AddForce(Vector3.up * wifiSpeed);
                 counterWifi--;
-            }
-            else //keine Munition, Raketen werden verschossen
-            {
-                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+                waitingTime = Time.time + WeapondeltaTime;
             }
             schiessen2 = false;
         }
 
         if (schiessen3) //Laser
         {
-                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
-                
-                schiessen3 = false;
+            if (Time.time > waitingTime)
+            {
+            GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
+            Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+            waitingTime = Time.time + WeapondeltaTime;
+            }
+            schiessen3 = false;
         }
 
         // neue Bewegung, dass Box Collider gut aussieht

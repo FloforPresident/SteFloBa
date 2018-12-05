@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 61600175777998118}
   - component: {fileID: 61220257925330964}
   - component: {fileID: 50064359757231748}
+  - component: {fileID: 114648216642756320}
   m_Layer: 10
   m_Name: Raketen
   m_TagString: Bullet
@@ -99,7 +100,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -3.025, y: 0.6}
@@ -124,7 +125,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 5.36, y: 0}
@@ -149,7 +150,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 3.025, y: 0.6}
@@ -165,6 +166,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9}
   m_EdgeRadius: 0
+--- !u!114 &114648216642756320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930416352786594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dd29c86ac23c342a1de88c8b8e9aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212717334870892880
 SpriteRenderer:
   m_ObjectHideFlags: 1

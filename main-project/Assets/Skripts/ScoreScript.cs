@@ -6,13 +6,16 @@ using System;
 
 public class ScoreScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start() { }
+	
+    public uint enemy2Points = 10000u;
+    public const uint moreDifficult = 10000u;
 
-    public uint enemy2Points = 6000u;
-    public const uint moreDifficult = 5000u;
+    public ScoreScript()
+    {
+        EnemieSpawnerScript.enemy2Spawn = false;
+    }
 
     public Text score;
     public static uint deltaScore = 0u;
@@ -27,14 +30,14 @@ public class ScoreScript : MonoBehaviour {
         //Schwierigkeitsgrad erhöhen
         if (deltaScore > moreDifficult)
         {
-            EnemieSpawnerScript.spawnRate *= 0.9;
+            EnemieSpawnerScript.spawnRate *= 0.95;
             deltaScore = 0;
         }
-        //Endgegner kommt
+        //enemy2 kommt
         if(Score > enemy2Points)
         {
             EnemieSpawnerScript.enemy2Spawn = true;
-            enemy2Points += 6000;
+            enemy2Points += 10000;
         }
     }
 }
