@@ -22,12 +22,13 @@ public class EnemieHit : MonoBehaviour {
         if(col.gameObject.tag.Equals("Bullet"))
         {
             Destroy(col.gameObject);
+            Instantiate(destruction2, transform.position, Quaternion.identity); //Explosion wenn getroffen
 
-            if(lifes < 2)
+            if (lifes < 2)
             {
             Destroy(gameObject);
             Instantiate(destruction1, transform.position, Quaternion.identity);
-            Instantiate(destruction2, transform.position, Quaternion.identity);
+            //Instantiate(destruction2, transform.position, Quaternion.identity);
             ScoreScript.Score += 1000;
             ScoreScript.deltaScore += 1000;
             }

@@ -12,7 +12,7 @@ public class EnemieSpawnerScript : MonoBehaviour {
     float randX;
     Vector2 whereToSpawn;
 
-    public static double spawnRate = 2;
+    public static double spawnRate = 3;
     double nextSpawn = 0.0;
     
     // Use this for initialization
