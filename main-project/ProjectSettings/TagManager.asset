@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Enemy
+  - Drop_Icon
   layers:
   - Default
   - TransparentFX

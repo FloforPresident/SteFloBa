@@ -8,6 +8,13 @@ public class EnemieHit : MonoBehaviour {
     public GameObject destruction2;
 
     public uint lifes;
+
+    public Sprite damaged1;
+    public Sprite damaged2;
+
+    Vector2 whereToSpawnDropIcon;
+    public GameObject DropIcon;
+
     // Use this for initialization
     void Start () {
 		
@@ -33,6 +40,27 @@ public class EnemieHit : MonoBehaviour {
             ScoreScript.deltaScore += 1000;
             }
             lifes--;
+
+
+            //Aussehen ändern bei Treffer
+        
+            if (lifes == 2)
+            {
+                this.GetComponent<SpriteRenderer>().sprite = damaged1;
+            }
+            else if (lifes == 1)
+            {
+                this.GetComponent<SpriteRenderer>().sprite = damaged2;
+            }
+
+
+            //Drop Icon spawnen an letzter Position
+
+            if (lifes == 0)
+            {
+                whereToSpawnDropIcon = new Vector2(transform.position.x, transform.position.y);
+                Instantiate(DropIcon, whereToSpawnDropIcon, Quaternion.identity);
+            }
         }
     }
 }
