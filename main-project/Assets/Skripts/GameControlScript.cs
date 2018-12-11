@@ -20,6 +20,8 @@ public class GameControlScript : MonoBehaviour {
 	void Update () {
         if (health > 3)
             health = 3;
+        else if (health < 0)
+            health = 0;
 
         switch (health)
         {
