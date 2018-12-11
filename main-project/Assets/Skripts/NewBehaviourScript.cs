@@ -27,7 +27,7 @@ public class NewBehaviourScript : MonoBehaviour {
     public const int timerIntervallMissiles = 500;
 
     public float waitingTime = 0;
-    public float WeapondeltaTime = 0.3f; //waitingtime between shots
+    public float WeapondeltaTime = 0.1f; //waitingtime between shots
 
     //Vector3 scaleTransform = new Vector3(0.1f, 0.1f, 0);
 
@@ -106,7 +106,7 @@ public class NewBehaviourScript : MonoBehaviour {
             {
             GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
             Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
-            waitingTime = Time.time + WeapondeltaTime;
+            //waitingTime = Time.time + WeapondeltaTime;
             }
             schiessen3 = false;
         }
