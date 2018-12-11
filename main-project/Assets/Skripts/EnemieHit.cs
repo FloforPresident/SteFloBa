@@ -26,7 +26,12 @@ public class EnemieHit : MonoBehaviour {
 	}
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag.Equals("Bullet"))
+        if(col.gameObject.tag.Equals("Killbound")) //Gegner töten
+        {
+            Destroy(gameObject);
+        }
+
+        if (col.gameObject.tag.Equals("Bullet"))
         {
             Destroy(col.gameObject);
             Instantiate(destruction2, transform.position, Quaternion.identity); //Explosion wenn getroffen

@@ -15,7 +15,8 @@ public class EnemyMain : MonoBehaviour {
     private Transform player;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         timeBtwShots = starttimeBtwShots;
