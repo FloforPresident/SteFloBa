@@ -81,9 +81,13 @@ public class NewBehaviourScript : MonoBehaviour {
             if(counterRaketen > 0 && Time.time > waitingTime)
             {
                 GameObject Rakete = (GameObject) Instantiate(raketenPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                //Rakete.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
                 counterRaketen--;
                 waitingTime = Time.time + WeapondeltaTime;
+            }
+            else    //shoots Laser instead
+            {
+                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
+                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
             }
             schiessen1 = false;
         }
@@ -93,21 +97,21 @@ public class NewBehaviourScript : MonoBehaviour {
             if (counterWifi > 0 && Time.time > waitingTime)
             {
                 GameObject Wifi = (GameObject)Instantiate(wifiPrefab, raketenSpawnPoint.position, Quaternion.identity);
-                //Wifi.GetComponent<Rigidbody2D>().AddForce(Vector3.up * wifiSpeed);
                 counterWifi--;
                 waitingTime = Time.time + WeapondeltaTime;
+            }
+            else    //shoots Laser instead
+            {
+                GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
+                Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
             }
             schiessen2 = false;
         }
 
         if (schiessen3) //Laser
         {
-            if (Time.time > waitingTime*0.5)
-            {
             GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
             Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
-            //waitingTime = Time.time + WeapondeltaTime;
-            }
             schiessen3 = false;
         }
 

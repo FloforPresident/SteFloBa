@@ -9,11 +9,13 @@ public class WifiScript : MonoBehaviour {
 		
 	}
 
-    Vector3 scaleTransform = new Vector3(0.05f, 0.05f, 0);
-	// Update is called once per frame
-	void Update ()
+    //Vector3 scaleTransform = new Vector3(0.05f, 0.05f, 0);
+    Vector3 scaleTransform = new Vector3(0.3f, 0.3f, 0);
+
+    // Update is called once per frame
+    void Update ()
     {
-        transform.Translate(0, 1, 0);
+        transform.Translate(0, (float)0.5, 0);
         transform.localScale += scaleTransform;
 	}
 }
