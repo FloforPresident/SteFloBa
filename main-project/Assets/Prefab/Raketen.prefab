@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4253048916025886}
   - component: {fileID: 212717334870892880}
-  - component: {fileID: 61598155008918006}
-  - component: {fileID: 61047700909274484}
   - component: {fileID: 61600175777998118}
-  - component: {fileID: 61220257925330964}
   - component: {fileID: 50064359757231748}
   - component: {fileID: 114648216642756320}
+  - component: {fileID: 61165003892215850}
+  - component: {fileID: 61137836995115012}
+  - component: {fileID: 61449271393769580}
   m_Layer: 10
   m_Name: Raketen
   m_TagString: Bullet
@@ -66,7 +66,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61047700909274484
+--- !u!61 &61137836995115012
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.36, y: 0}
+  m_Offset: {x: 2.9749722, y: 1.0009191}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -89,9 +89,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.9}
+  m_Size: {x: 1.0987759, y: 1.0666084}
   m_EdgeRadius: 0
---- !u!61 &61220257925330964
+--- !u!61 &61165003892215850
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.025, y: 0.6}
+  m_Offset: {x: -3.0027466, y: 1.0287217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -114,9 +114,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.9}
+  m_Size: {x: 1.0431957, y: 1.1222184}
   m_EdgeRadius: 0
---- !u!61 &61598155008918006
+--- !u!61 &61449271393769580
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.36, y: 0}
+  m_Offset: {x: 5.338257, y: 0.33363914}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -139,7 +139,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.9}
+  m_Size: {x: 0.931942, y: 0.9553957}
   m_EdgeRadius: 0
 --- !u!61 &61600175777998118
 BoxCollider2D:
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.025, y: 0.6}
+  m_Offset: {x: -5.321241, y: 0.266361}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -164,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.9}
+  m_Size: {x: 0.8376837, y: 1.1215067}
   m_EdgeRadius: 0
 --- !u!114 &114648216642756320
 MonoBehaviour:

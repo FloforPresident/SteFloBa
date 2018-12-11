@@ -914,6 +914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745280625}
   - component: {fileID: 745280627}
+  - component: {fileID: 745280628}
   - component: {fileID: 745280626}
   m_Layer: 5
   m_Name: GameOverText
@@ -972,7 +973,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Game Over
+  m_Text: Game over default
 --- !u!222 &745280627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -980,6 +981,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745280624}
   m_CullTransparentMesh: 0
+--- !u!114 &745280628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745280624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad363617264368246af82940ff991658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 745280626}
 --- !u!1 &776747691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,8 +1870,6 @@ MonoBehaviour:
   raketenSpawnPoint: {fileID: 776747692}
   raketenSpeed: 500
   wifiSpeed: 1
-  timer: 0
-  timerIntervall: 100
   waitingTime: 0
   WeapondeltaTime: 0.5
 --- !u!212 &1685119454

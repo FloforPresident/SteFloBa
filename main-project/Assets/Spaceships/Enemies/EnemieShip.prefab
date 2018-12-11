@@ -104,7 +104,7 @@ MonoBehaviour:
     type: 2}
   destruction2: {fileID: 1195813623865962, guid: 58e255c73917a2340a7f6d12fd49205c,
     type: 2}
-  lifes: 3
+  lifes: 5
   damaged1: {fileID: 21300000, guid: 4ee1c09e476f703469d8ba4c022c598a, type: 3}
   damaged2: {fileID: 21300000, guid: 2d424f279d842454398cf82ef315bcca, type: 3}
   DropIcon: {fileID: 1362032933791132, guid: 175afc796854e634aa0d49e21e1116d3, type: 2}

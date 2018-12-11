@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212266446895778850}
   - component: {fileID: 50571217592775914}
   - component: {fileID: 61645835172521826}
-  - component: {fileID: 61948514145316592}
+  - component: {fileID: 61996447529483210}
   m_Layer: 10
   m_Name: Laser
   m_TagString: Bullet
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.9819665, y: 0.03758806}
+  m_Offset: {x: -2.9952626, y: 0.03758812}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,9 +86,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.50939274, y: 2.287094}
+  m_Size: {x: 0.48280048, y: 2.287094}
   m_EdgeRadius: 0
---- !u!61 &61948514145316592
+--- !u!61 &61996447529483210
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0022788, y: 0.0000004172325}
+  m_Offset: {x: 3.003685, y: -0.56021076}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62182903, y: 2.4633799}
+  m_Size: {x: 0.41430664, y: 1.1167973}
   m_EdgeRadius: 0
 --- !u!212 &212266446895778850
 SpriteRenderer:

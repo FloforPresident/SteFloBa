@@ -10,8 +10,8 @@ public class NewBehaviourScript : MonoBehaviour {
     private bool schiessen2 = false;    //wifi
     private bool schiessen3 = false;    //laser
 
-    static public int counterWifi = 10;
-    static public int counterRaketen = 20;
+    static public int counterWifi = 1;
+    static public int counterRaketen = 5;
 
     public GameObject raketenPrefab;
     public GameObject wifiPrefab;
@@ -21,11 +21,13 @@ public class NewBehaviourScript : MonoBehaviour {
     public float raketenSpeed = 300f;
     public float wifiSpeed = 1;
 
-    public int timer = 0;
-    public int timerIntervall = 100; //Aufladerate von Missiles & Wifi
+    public static int timerWifi = 0;
+    public static int timerMissiles = 0;
+    public const int timerIntervallWifi = 800; //Aufladerate von Missiles & Wifi
+    public const int timerIntervallMissiles = 500;
 
     public float waitingTime = 0;
-    public float WeapondeltaTime = 0.3f;
+    public float WeapondeltaTime = 0.3f; //waitingtime between shots
 
     //Vector3 scaleTransform = new Vector3(0.1f, 0.1f, 0);
 
@@ -38,14 +40,20 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
-
-        timer++;
-        if (timer == timerIntervall)
+        timerMissiles++;
+        if (timerMissiles == timerIntervallMissiles)
         {
             counterRaketen++;
-            counterWifi++;
-            timer = 0;
+            timerMissiles = 0;
         }
+
+        timerWifi++;
+        if(timerWifi == timerIntervallWifi)
+        {
+            counterWifi++;
+            timerWifi = 0;
+        }
+
         //neue Bewegung in FixedUpdate
 
         //transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * movespeed,
@@ -94,7 +102,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
         if (schiessen3) //Laser
         {
-            if (Time.time > waitingTime)
+            if (Time.time > waitingTime*0.5)
             {
             GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
             Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);

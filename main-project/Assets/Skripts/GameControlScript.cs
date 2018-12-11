@@ -45,6 +45,7 @@ public class GameControlScript : MonoBehaviour {
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
+                ScoreScript.GameOver = true;
                 Time.timeScale = 0;
                 break;
 

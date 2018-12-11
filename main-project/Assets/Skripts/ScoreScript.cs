@@ -9,8 +9,11 @@ public class ScoreScript : MonoBehaviour {
     // Use this for initialization
     void Start() { }
 	
-    public uint enemy2Points = 10000u;
-    public const uint moreDifficult = 10000u;
+    public uint enemy2Points = 10000u; //score points to spawn enemy2
+    public const uint moreDifficult = 5000u; //reaching this score, game gets harder
+
+    public static bool GameOver = false;
+    float enhanceSpawning = (float)0.9;
 
     public ScoreScript()
     {
@@ -23,14 +26,17 @@ public class ScoreScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if(GameOver == false)
+        {
         deltaScore++;
         Score++;    //Gegner zerstören Bonus im EnemieHit script, für Geschosse im 
+        }
         score.text = "Score: " + Score;
 
         //Schwierigkeitsgrad erhöhen
         if (deltaScore > moreDifficult)
         {
-            EnemieSpawnerScript.spawnRate *= 0.95;
+            EnemieSpawnerScript.spawnRate *= enhanceSpawning;
             deltaScore = 0;
         }
         //enemy2 kommt
