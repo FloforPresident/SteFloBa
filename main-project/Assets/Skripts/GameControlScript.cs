@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class GameControlScript : MonoBehaviour {
 
@@ -41,6 +42,17 @@ public class GameControlScript : MonoBehaviour {
                 heart3.gameObject.SetActive(false);
                 break;
             case 0:
+                StreamReader highscore = new StreamReader(@"\Highscore.txt"); //StreamReader and Writer for Highscore
+                int _highscore = System.Convert.ToInt32(highscore.ReadLine());
+                highscore.Close();
+
+                if(_highscore < ScoreScript.Score)
+                {
+                StreamWriter sw = new StreamWriter(@"\Highscore.txt");
+                sw.WriteLine(ScoreScript.Score);
+                sw.Close();
+                }
+
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
