@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemieSpawnerScript : MonoBehaviour {
 
     public GameObject enemy;
-
     public GameObject enemy2;
+    public GameObject enemy3;
+
+
     public static bool enemy2Spawn = false;
 
     float randX;
@@ -36,7 +38,13 @@ public class EnemieSpawnerScript : MonoBehaviour {
             nextSpawn = Time.time + spawnRate;
             randX = Random.Range(-7.5f, 7.5f);           
             whereToSpawn = new Vector2(randX, transform.position.y);
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
+
+            //Random enemy type spawn
+            int randomNumber = Random.Range(0, 2);
+            if(randomNumber==0)
+                Instantiate(enemy, whereToSpawn, Quaternion.identity);
+            else
+                Instantiate(enemy3, whereToSpawn, Quaternion.identity);
         }
 	}
 }
