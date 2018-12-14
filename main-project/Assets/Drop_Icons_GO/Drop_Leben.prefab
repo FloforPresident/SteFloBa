@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 61706519907540738}
   - component: {fileID: 50146492166084372}
   - component: {fileID: 247255964786531892}
-  - component: {fileID: 114705554613758956}
-  - component: {fileID: 114867539488835794}
+  - component: {fileID: 114598081645710746}
+  - component: {fileID: 114950140362425826}
   m_Layer: 0
   m_Name: Drop_Leben
   m_TagString: Drop_Icon
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
---- !u!114 &114705554613758956
+--- !u!114 &114598081645710746
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,10 +170,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362032933791132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 816b15b2143669d47ad1e9c063ca415a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f93691bd0bc5634cbbb6bf49a448b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114867539488835794
+--- !u!114 &114950140362425826
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362032933791132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34ad733d0c7f3848a5e1470f57b4422, type: 3}
+  m_Script: {fileID: 11500000, guid: 6aec1fc5e436c374880f107a97e90493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212125770155777030
