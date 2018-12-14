@@ -64,6 +64,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\setDropIconInactive.cs" />
+     <Compile Include="Assets\Shield_Active_Handler.cs" />
      <Compile Include="Assets\Skripts\animationController.cs" />
      <Compile Include="Assets\Skripts\Antrieb_Bewegung.cs" />
      <Compile Include="Assets\Skripts\Background_Scroller.cs" />

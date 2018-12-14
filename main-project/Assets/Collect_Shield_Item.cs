@@ -6,7 +6,7 @@ public class Collect_Shield_Item : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
@@ -20,6 +20,7 @@ public class Collect_Shield_Item : MonoBehaviour {
         if (other.gameObject.tag.Equals("Player"))
         {
             this.gameObject.SetActive(false);
+            Shield_Active_Handler.active = true;
         }
     }
 }
