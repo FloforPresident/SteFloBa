@@ -1621,7 +1621,6 @@ GameObject:
   - component: {fileID: 1229402993}
   - component: {fileID: 1229402996}
   - component: {fileID: 1229402995}
-  - component: {fileID: 1229402997}
   m_Layer: 0
   m_Name: Spaceship1_Shield
   m_TagString: Killbound
@@ -1746,17 +1745,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1229402997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1229402991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac14eec93a42dd4ca9cb8957cd33624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1351537416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,10 +2192,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685119452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316bb69265a3baa40ac579890d254c37, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ac14eec93a42dd4ca9cb8957cd33624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drop1: {fileID: 1362032933791132, guid: 175afc796854e634aa0d49e21e1116d3, type: 2}
+  shield: {fileID: 1229402991}
 --- !u!1 &1754900452
 GameObject:
   m_ObjectHideFlags: 0
