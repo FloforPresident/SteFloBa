@@ -23,7 +23,7 @@ public class GameOverText : MonoBehaviour {
         //}
         //else
         {
-            StreamReader sr = new StreamReader(@"\Highscore.txt");
+            StreamReader sr = new StreamReader(@"Highscore.txt");
             string Highscore = sr.ReadLine();
             sr.Close();
 
