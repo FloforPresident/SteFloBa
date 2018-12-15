@@ -76,7 +76,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if(schiessen1) //Raketen
+        if(schiessen2) //Raketen
         {
             if(counterRaketen > 0 && Time.time > waitingTime)
             {
@@ -89,10 +89,10 @@ public class NewBehaviourScript : MonoBehaviour {
                 GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
                 Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
             }
-            schiessen1 = false;
+            schiessen2 = false;
         }
 
-        if (schiessen2) //Wifi
+        if (schiessen1) //Wifi
         {
             if (counterWifi > 0 && Time.time > waitingTime)
             {
@@ -105,7 +105,7 @@ public class NewBehaviourScript : MonoBehaviour {
                 GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
                 Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
             }
-            schiessen2 = false;
+            schiessen1 = false;
         }
 
         if (schiessen3) //Laser
