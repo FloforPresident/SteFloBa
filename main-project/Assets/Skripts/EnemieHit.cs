@@ -13,7 +13,10 @@ public class EnemieHit : MonoBehaviour {
     public Sprite damaged2;
 
     Vector2 whereToSpawnDropIcon;
-    public GameObject DropIcon;
+    public int randomint;
+    GameObject DropIcon;
+    public GameObject DropIcon1;
+    public GameObject DropIcon2;
 
     // Use this for initialization
     void Start () {
@@ -59,8 +62,20 @@ public class EnemieHit : MonoBehaviour {
             }
 
 
-            //Drop Icon spawnen an letzter Position
 
+            //Zufällig Gameobject 1 oder 2 auswählen
+            randomint = Random.Range(1,3);     
+
+            if (randomint == 1)
+            {
+                DropIcon = DropIcon1;
+            }
+            else if (randomint == 2)
+            {
+                DropIcon = DropIcon2;
+            }
+
+            //Drop Icon spawnen an letzter Position
             if (lifes == 0)
             {
                 whereToSpawnDropIcon = new Vector2(transform.position.x, transform.position.y);
