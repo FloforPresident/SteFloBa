@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemieSpawnerScript : MonoBehaviour {
 
     public GameObject enemy;
-
     public GameObject enemy2;
+    public GameObject enemy3;
+
     public static bool enemy2Spawn = false;
 
     float randX;
@@ -16,9 +17,7 @@ public class EnemieSpawnerScript : MonoBehaviour {
     double nextSpawn = 0.0;
     
     // Use this for initialization
-	void Start () {
-		
-	}
+	void Start () {	}
 	
 	// Update is called once per frame
 	void Update ()
@@ -36,7 +35,11 @@ public class EnemieSpawnerScript : MonoBehaviour {
             nextSpawn = Time.time + spawnRate;
             randX = Random.Range(-7.5f, 7.5f);           
             whereToSpawn = new Vector2(randX, transform.position.y);
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
+
+             if(Random.Range(1, 3) == 1)
+                Instantiate(enemy, whereToSpawn, Quaternion.identity);
+             else
+                Instantiate(enemy3, whereToSpawn, Quaternion.identity);
         }
-	}
+    }
 }

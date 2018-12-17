@@ -31,7 +31,7 @@ public class ScoreScript : MonoBehaviour {
         deltaScore++;
         Score++;    //Gegner zerstören Bonus im EnemieHit script, für Geschosse im 
         }
-        score.text = "Score: " + Score + " " + EnemieSpawnerScript.spawnRate;
+        score.text = "Score: " + Mathf.Round(Score) /* + " " + EnemieSpawnerScript.spawnRate */;
 
         //Schwierigkeitsgrad erhöhen
         if (deltaScore > moreDifficult)
