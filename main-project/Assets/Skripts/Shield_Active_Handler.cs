@@ -6,7 +6,8 @@ public class Shield_Active_Handler : MonoBehaviour {
 
     public static bool active;
     public GameObject shield;
-    uint framecounter = 0;
+
+    //CountDown wurde ausgelagert in Countdown Script
 
     // Use this for initialization
     void Start()
@@ -20,17 +21,10 @@ public class Shield_Active_Handler : MonoBehaviour {
         if (active == true)
         {
             shield.SetActive(true);
-            framecounter++;
         }
         else if (active == false)
         {
             shield.SetActive(false);
-        }
-
-        if (framecounter == 300)
-        {
-            active = false;
-            framecounter = 0;
         }
     }
 }
