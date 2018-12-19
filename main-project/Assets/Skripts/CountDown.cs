@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
-    public float CountdownValue;     //Hier zeit für Countdown einstellen
+    float CountdownValue = 10.0f;     //Hier zeit für Countdown einstellen
     float timeLeft;
     public Text text;
 

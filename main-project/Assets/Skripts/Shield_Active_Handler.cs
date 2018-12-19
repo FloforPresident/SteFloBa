@@ -6,6 +6,7 @@ public class Shield_Active_Handler : MonoBehaviour {
 
     public static bool active;
     public GameObject shield;
+    public GameObject shieldIcon;
 
     //CountDown wurde ausgelagert in Countdown Script
 
@@ -13,6 +14,7 @@ public class Shield_Active_Handler : MonoBehaviour {
     void Start()
     {
         shield.SetActive(false);
+        shieldIcon.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -21,10 +23,13 @@ public class Shield_Active_Handler : MonoBehaviour {
         if (active == true)
         {
             shield.SetActive(true);
+            shieldIcon.SetActive(true);
         }
         else if (active == false)
         {
             shield.SetActive(false);
+            shieldIcon.SetActive(false);
+
         }
     }
 }
