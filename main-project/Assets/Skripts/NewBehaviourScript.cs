@@ -12,6 +12,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
     static public int counterWifi = 1;
     static public int counterRaketen = 5;
+    static public int counterLaser = 50;
+
 
     public GameObject raketenPrefab;
     public GameObject wifiPrefab;
@@ -23,14 +25,16 @@ public class NewBehaviourScript : MonoBehaviour {
 
     public static int timerWifi = 0;
     public static int timerMissiles = 0;
+    public static int timerLaser = 0;
     public const int timerIntervallWifi = 800; //Aufladerate von Missiles & Wifi
     public const int timerIntervallMissiles = 500;
+    public const int timerIntervallLaser = 30;
 
-    public float waitingTime = 0;
-    public float WeapondeltaTime = 0.1f; //waitingtime between shots
+    public static float waitingTime = 0;
+    public static float WeapondeltaTime = 1f; //waitingtime between shots
 
-    public float waitingTimeLaser = 0;
-    public float WeapondeltaTimeLaser = 1f; //waitingtime between LaserShots
+    public static float waitingTimeLaser = 0;
+    public static float WeapondeltaTimeLaser = 0.1f; //waitingtime between LaserShots
 
     //Vector3 scaleTransform = new Vector3(0.1f, 0.1f, 0);
 
@@ -43,6 +47,13 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
     {
+        timerLaser++;
+        if (timerLaser == timerIntervallLaser)
+        {
+            counterLaser++;
+            timerLaser = 0;
+        }
+
         timerMissiles++;
         if (timerMissiles == timerIntervallMissiles)
         {
@@ -116,10 +127,11 @@ public class NewBehaviourScript : MonoBehaviour {
 
         if (schiessen3) //Laser
         {
-            if (Time.time > waitingTimeLaser)
+            if (counterLaser > 0 && Time.time > waitingTimeLaser)
             {
                 GameObject Laser = (GameObject)Instantiate(laserPrefab, raketenSpawnPoint.position, Quaternion.identity);
                 Laser.GetComponent<Rigidbody2D>().AddForce(Vector3.up * raketenSpeed);
+                counterLaser--;
                 waitingTimeLaser = Time.time + WeapondeltaTimeLaser;
             }            
         }

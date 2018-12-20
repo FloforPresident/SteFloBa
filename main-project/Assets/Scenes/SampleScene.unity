@@ -603,6 +603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy2Points: 1000
   score: {fileID: 489213327}
+  extraAmmo1: 1
+  extraAmmo2: 1
+  extraAmmo3: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +1998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405791807}
   - component: {fileID: 1405791810}
+  - component: {fileID: 1405791808}
   - component: {fileID: 1405791809}
   m_Layer: 5
   m_Name: LaserText
@@ -2019,9 +2023,23 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 198.67531, y: 100}
+  m_AnchoredPosition: {x: 198.67531, y: 86.4}
   m_SizeDelta: {x: 148.2, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1405791808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405791806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e35475d128ddd4d9ddf091f6030790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Laser: {fileID: 1405791809}
+  laserAmmo: 0
 --- !u!114 &1405791809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2044,7 +2062,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2055,7 +2073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u221E"
+  m_Text: Default Laser
 --- !u!222 &1405791810
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2326,8 +2344,6 @@ MonoBehaviour:
   raketenSpawnPoint: {fileID: 776747692}
   raketenSpeed: 500
   wifiSpeed: 1
-  waitingTime: 0
-  WeapondeltaTime: 0.5
 --- !u!212 &1685119454
 SpriteRenderer:
   m_ObjectHideFlags: 0

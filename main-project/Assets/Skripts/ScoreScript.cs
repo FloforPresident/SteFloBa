@@ -22,11 +22,32 @@ public class ScoreScript : MonoBehaviour {
 
     public Text score;
     public static uint deltaScore = 0u;
-    public static uint Score = 0u;
-	// Update is called once per frame
-	void Update ()
+    public static uint Score = 1u;
+
+    public bool extraAmmo1 = true;  //bool damit Ammo nur einmal erhöht wird
+    public bool extraAmmo2 = true;
+    public bool extraAmmo3 = true;
+
+    // Update is called once per frame
+    void Update ()
     {
-        if(GameOver == false)
+        if (Score > 100000 && extraAmmo1)
+        {
+            NewBehaviourScript.counterLaser += 100;
+            extraAmmo1 = false;
+        }
+        if (Score > 200000 && extraAmmo2)
+        {
+            NewBehaviourScript.counterLaser += 100;     //extra Laser Ammunition
+            extraAmmo2 = false;
+        }
+        if (Score > 300000 && extraAmmo3)
+        {
+            NewBehaviourScript.counterLaser += 100;
+            extraAmmo3 = false;
+        }
+
+        if (GameOver == false)
         {
         deltaScore++;
         Score++;    //Gegner zerstören Bonus im EnemieHit script, für Geschosse im 
