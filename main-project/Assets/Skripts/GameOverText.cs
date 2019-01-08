@@ -27,7 +27,7 @@ public class GameOverText : MonoBehaviour {
             string Highscore = sr.ReadLine();
             sr.Close();
 
-        gameOver.text = "GAME OVER \nDein Score: " + ScoreScript.Score + "\n\nHighscore: " + Highscore;
+        gameOver.text = "GAME OVER \nDein Score: " + ScoreScript.Score + "\n\nHighscore: " + Highscore + "\n\n\nPress ESC to quit";
         }
 	}
 }

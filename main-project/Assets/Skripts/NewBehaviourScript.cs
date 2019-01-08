@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class NewBehaviourScript : MonoBehaviour {
 
@@ -73,6 +75,10 @@ public class NewBehaviourScript : MonoBehaviour {
         //transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * movespeed,
         //                    Input.GetAxis("Vertical") * Time.deltaTime * movespeed,
         //                    0f);
+        if(Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+        }
 
         if (Input.GetButtonDown("Fire1") && !schiessen1)
         {
