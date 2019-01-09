@@ -93,7 +93,9 @@ public class NewBehaviourScript : MonoBehaviour {
             if (schiessen3)
                 schiessen3 = false;
             else
-            schiessen3 = true;
+            {
+                schiessen3 = true;
+            }
         }
     }
 

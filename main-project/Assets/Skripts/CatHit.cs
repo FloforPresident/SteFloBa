@@ -5,11 +5,12 @@ using UnityEngine;
 public class CatHit : MonoBehaviour {
 
     public GameObject destruction;
+    AudioSource Audio;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        Audio = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,5 +35,7 @@ public class CatHit : MonoBehaviour {
 
             //col.gameObject.transform.localScale += new Vector3(0.03f, 0.03f, 0);
         }
+
+        Audio.Play();
     }
 }
